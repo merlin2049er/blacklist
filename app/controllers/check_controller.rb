@@ -8,14 +8,9 @@ class CheckController < ApplicationController
 
     respond_to do |format|
       format.html do
-        if Banned.find_by_email( params[:q])
-
-
-          @result = Banned.msg
-
-
+        if  @user = Banned.find_by_email( params[:q])
+          @result = @user.msg
         else
-
           @result = "Not banned."
       end
       end

@@ -1,5 +1,7 @@
 class Banned < ApplicationRecord
 
+  belongs_to :check
+
   validates :email, presence: true
   validates :msg, presence: true
 
