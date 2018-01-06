@@ -1,0 +1,10 @@
+<!--
+<%#= form_tag("/search", method: "get") do %>
+-->
+
+<%= form_tag url_for(:controller => 'check', :action => 'search'), :method => 'get' do %>
+  <%= label_tag(:q, "Search for email:") %>
+  <%= text_field_tag(:q) %> </br>
+  <%= submit_tag("Search") %>
+<% end %>
+
